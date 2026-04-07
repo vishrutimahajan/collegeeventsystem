@@ -1,0 +1,13 @@
+body {
+  margin: 0;
+  padding: 0;
+  /* A very soft, pale wine tint (Blush) */
+  background-color: #fdf4f6; 
+  font-family: 'Outfit', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color: #4a1526; /* Dark Wine text for contrast */
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap');
+
+/* 1. Background Wrapper */
+.login-wrapper {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at top left, #fceff3, #f0f2f5); 
+  font-family: 'Outfit', sans-serif;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* 2. The Main Card Container */
+.login-card {
+  display: flex;
+  width: 100%;
+  max-width: 900px;
+  background: white;
+  border-radius: 24px;
+  box-shadow: 0 25px 50px rgba(150, 28, 70, 0.1);
+  overflow: hidden;
+  min-height: 500px;
+}
+
+/* --- LEFT FORM SECTION --- */
+.login-form-section {
+  flex: 1;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-avatar { font-size: 60px; margin-bottom: 20px; color: #ddd; }
+
+.login-form-section h2 {
+  font-size: 24px; font-weight: 700; color: #333; margin: 0 0 30px 0; letter-spacing: 2px;
+}
+
+.login-form-section form {
+  width: 100%;
+  max-width: 320px; /* Limits width so it looks good on big screens too */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Inputs */
+.input-container { position: relative; width: 100%; }
+.input-icon {
+  position: absolute; left: 15px; top: 50%; transform: translateY(-50%);
+  font-size: 18px; color: #aaa;
+}
+.input-container input {
+  width: 100%;
+  padding: 15px 15px 15px 50px; /* Room for icon */
+  border: 1px solid #eee;
+  border-radius: 12px;
+  font-size: 14px;
+  outline: none;
+  background: #fbfbfb;
+  box-sizing: border-box; /* Prevents padding from breaking width */
+}
+.input-container input:focus { border-color: #961c46; background: white; }
+
+/* Button */
+.login-btn {
+  background: #961c46; color: white; padding: 15px; border: none; border-radius: 12px;
+  font-size: 16px; font-weight: 700; cursor: pointer; transition: background 0.2s;
+}
+.login-btn:hover { background: #b02253; }
+
+/* Links (Remember Me / Forgot Pass) */
+.form-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  color: #777;
+  margin-top: 5px;
+  width: 100%;
+}
+.remember-me { display: flex; align-items: center; gap: 5px; cursor: pointer; white-space: nowrap; }
+.forgot-pass { cursor: pointer; text-align: right; }
+.forgot-pass:hover { color: #961c46; }
+
+/* --- RIGHT TEXT SECTION --- */
+.login-text-section {
+  flex: 1.2;
+  background: #fdf5f8;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-left: 1px solid #eee;
+}
+.login-text-section h1 { font-size: 42px; font-weight: 800; color: #333; margin: 0 0 20px 0; }
+.login-text-section p { font-size: 16px; color: #666; line-height: 1.6; margin-bottom: 20px; }
+.signup-prompt span { color: #961c46; font-weight: 700; cursor: pointer; }
+
+/* --- MOBILE FIXES --- */
+@media (max-width: 768px) {
+  .login-card {
+    flex-direction: column;
+    max-width: 400px; /* Keeps it phone-sized */
+    min-height: auto;
+  }
+
+  /* Hide the big text section on phones to keep it clean */
+  .login-text-section {
+    display: none; 
+  }
+
+  .login-form-section {
+    padding: 30px 20px;
+  }
+  
+  /* Make links stack if screen is too small */
+  .form-links {
+    font-size: 11px;
+  }
+}
+/* --- ROLE TOGGLE SWITCH --- */
+.role-toggle-container {
+  display: flex;
+  background: #f0f0f0;
+  padding: 5px;
+  border-radius: 30px;
+  margin-bottom: 20px;
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.role-btn {
+  flex: 1;
+  border: none;
+  background: transparent;
+  padding: 8px;
+  border-radius: 25px;
+  font-weight: bold;
+  font-size: 13px;
+  cursor: pointer;
+  color: #888;
+  transition: all 0.3s ease;
+}
+
+.role-btn.active {
+  background: white;
+  color: #333;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* --- ADMIN THEME OVERRIDES --- */
+
+/* Change button color when Admin is selected */
+.login-btn.admin-theme {
+  background: linear-gradient(135deg, #2c3e50, #4ca1af); /* Blue/Grey for Admin */
+}
+.login-btn.admin-theme:hover {
+  background: linear-gradient(135deg, #1a252f, #3b8d99);
+}
+
+/* Change right side background for Admin */
+.login-text-section.admin-bg {
+  background: linear-gradient(135deg, #1a1a2e, #16213e); /* Dark Blue Theme */
+}

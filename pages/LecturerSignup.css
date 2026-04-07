@@ -1,0 +1,116 @@
+/* BACKGROUND LAYOUT */
+.lecturer-signup-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #fff0f5 0%, #ffe6ee 100%); /* Soft Pink Gradient */
+  font-family: 'Poppins', sans-serif;
+  padding: 20px;
+}
+
+/* CARD DESIGN */
+.lecturer-signup-card {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(150, 28, 70, 0.15);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  position: relative;
+  overflow: hidden;
+}
+
+/* TEXT STYLES */
+.lecturer-signup-card h2 {
+  margin-top: 0;
+  margin-bottom: 5px;
+  font-weight: 700;
+}
+
+.lecturer-signup-card p {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+/* APPROVAL BADGE */
+.status-badge {
+  background: #fff3cd;
+  color: #856404;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 5px 10px;
+  border-radius: 12px;
+  display: inline-block;
+  margin-bottom: 25px;
+  border: 1px solid #ffeeba;
+}
+
+/* INPUTS */
+.input-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.lecturer-signup-card input {
+  width: 100%;
+  padding: 14px 15px;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  outline: none;
+  font-size: 14px;
+  background: #fafafa;
+  transition: 0.3s;
+  box-sizing: border-box; /* Ensures padding doesn't break layout */
+}
+
+.lecturer-signup-card input:focus {
+  border-color: #961c46;
+  background: white;
+  box-shadow: 0 0 0 4px rgba(150, 28, 70, 0.05);
+}
+
+/* SUBMIT BUTTON */
+.submit-btn {
+  width: 100%;
+  background: #d65db1; /* Neon Pink for Lecturers */
+  color: white;
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: transform 0.2s, background 0.2s;
+  box-shadow: 0 4px 15px rgba(214, 93, 177, 0.3);
+}
+
+.submit-btn:hover {
+  background: #b54291;
+  transform: translateY(-2px);
+}
+
+/* BACK LINK */
+.back-link {
+  margin-top: 25px;
+  font-size: 13px;
+  color: #999;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.back-link:hover {
+  color: #961c46;
+  text-decoration: underline;
+}
+
+/* RESPONSIVE */
+@media (max-width: 480px) {
+  .lecturer-signup-card {
+    padding: 30px 20px;
+  }
+}

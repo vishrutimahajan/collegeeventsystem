@@ -1,0 +1,69 @@
+/* --- DESKTOP STYLES (Default) --- */
+.landing-wrapper {
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.landing-overlay {
+  /* Dark overlay so white text pops */
+  background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0.2)); 
+  width: 100%;
+  height: 100%;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* Push items to the bottom */
+  align-items: center;       /* Center horizontally */
+  padding-bottom: 80px;      /* Lift up from bottom */
+}
+
+.get-started-btn {
+  background: #961c46;
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 18px 150px;
+  border: none;
+  border-radius: 30px;
+  
+  width: auto;           
+  min-width: 200px;
+  max-width: 90%;        
+  
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+  transition: transform 0.2s ease, background 0.2s;
+}
+
+.get-started-btn:hover {
+  transform: translateY(-3px);
+  background: #b02253;
+}
+
+.get-started-btn:active {
+  transform: scale(0.95);
+}
+
+/* --- MOBILE OPTIMIZATION (The Fix) --- */
+@media (max-width: 768px) {
+  .landing-wrapper {
+    background-position: center bottom; /* Focuses on bottom part of image for phones */
+  }
+
+  .landing-overlay {
+    padding-bottom: 50px; /* Bring it closer to bottom on small screens */
+    background: linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.1)); /* Darker bottom for readability */
+  }
+
+  .get-started-btn {
+    width: 80%; /* Wider button on phone = easier to tap */
+    font-size: 16px; /* Slightly smaller text */
+    padding: 16px;
+  }
+}

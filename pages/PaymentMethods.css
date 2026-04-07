@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap');
+
+.payment-page-wrapper {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Outfit', sans-serif;
+  background: radial-gradient(circle at top left, #fceff3, #f0f2f5);
+  padding: 20px;
+}
+
+.payment-container {
+  width: 100%;
+  max-width: 450px;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(20px);
+  border-radius: 30px;
+  box-shadow: 0 20px 40px rgba(138, 28, 66, 0.1);
+  overflow: hidden;
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.payment-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background: rgba(255,255,255,0.5);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.payment-header h2 { margin: 0; font-size: 18px; color: #333; }
+.back-btn { background: none; border: none; font-size: 24px; cursor: pointer; }
+.spacer { width: 30px; }
+
+.scrollable-content { padding: 20px; overflow-y: auto; flex-grow: 1; }
+
+/* CREDIT CARD STYLE */
+.credit-card {
+  background: linear-gradient(135deg, #2c3e50, #4ca1af); /* Cool Blue/Black Gradient */
+  color: white;
+  padding: 20px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  position: relative;
+}
+
+.card-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; }
+.card-type { font-weight: 700; font-style: italic; font-size: 18px; }
+.delete-card-btn { background: none; border: none; color: white; font-size: 20px; cursor: pointer; opacity: 0.7; }
+.delete-card-btn:hover { opacity: 1; color: #ff6b6b; }
+
+.card-number { font-size: 22px; letter-spacing: 2px; margin-bottom: 20px; font-family: monospace; }
+
+.card-bottom { display: flex; justify-content: space-between; }
+.card-info { display: flex; flex-direction: column; font-size: 12px; }
+.card-info strong { font-size: 14px; margin-top: 4px; }
+
+/* ADD BUTTON */
+.add-card-btn {
+  width: 100%; padding: 15px; border: 2px dashed #8a1c42; color: #8a1c42;
+  background: none; border-radius: 15px; font-weight: 600; cursor: pointer;
+  margin-top: 10px; transition: all 0.2s;
+}
+.add-card-btn:hover { background: rgba(138, 28, 66, 0.05); }
+
+/* FORM */
+.add-card-form { background: white; padding: 20px; border-radius: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+.add-card-form h3 { margin-top: 0; color: #333; }
+.add-card-form input { width: 100%; padding: 12px; margin-bottom: 10px; border: 1px solid #ddd; border-radius: 10px; box-sizing: border-box; }
+.form-row { display: flex; gap: 10px; }
+.form-actions { display: flex; gap: 10px; margin-top: 10px; }
+.form-actions button { flex: 1; padding: 12px; border-radius: 10px; border: none; cursor: pointer; font-weight: 600; }
+.save-card-btn { background: #8a1c42; color: white; }

@@ -1,0 +1,100 @@
+/* --- SHARED STYLES --- */
+.details-page, .profile-page {
+  background: #fdf4f6; /* Keep the blush theme */
+}
+
+/* Header */
+.details-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 25px 15px 25px;
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(253, 244, 246, 0.9);
+  backdrop-filter: blur(10px);
+}
+.details-header h3 { margin: 0; font-size: 18px; color: #4a1526; font-weight: 700; }
+.back-btn { background: white; border: none; width: 40px; height: 40px; border-radius: 12px; font-size: 20px; cursor: pointer; box-shadow: 0 5px 15px rgba(0,0,0,0.05); color: #961c46; }
+
+/* --- EVENT DETAILS STYLES --- */
+.event-banner {
+  height: 200px;
+  border-radius: 30px;
+  margin-bottom: 25px;
+  display: flex; justify-content: center; align-items: center;
+  font-size: 50px; color: white;
+  box-shadow: 0 10px 30px rgba(150, 28, 70, 0.15);
+}
+
+.details-info h1 { font-size: 26px; color: #4a1526; margin: 0 0 15px 0; }
+
+.meta-row { display: flex; gap: 15px; margin-bottom: 15px; }
+.meta-item {
+  background: white; padding: 10px 15px; border-radius: 15px;
+  font-size: 13px; color: #555; font-weight: 500;
+  display: flex; align-items: center; gap: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+}
+
+.description { font-size: 14px; line-height: 1.6; color: #666; margin-bottom: 30px; }
+
+/* Speaker Card (Clickable) */
+.speaker-card {
+  background: white; padding: 15px; border-radius: 20px;
+  display: flex; align-items: center; gap: 15px;
+  box-shadow: 0 10px 25px rgba(150, 28, 70, 0.05);
+  cursor: pointer; transition: all 0.2s;
+  border: 1px solid transparent;
+}
+.speaker-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(150, 28, 70, 0.15);
+  border-color: rgba(150, 28, 70, 0.1);
+}
+
+.speaker-card img { width: 50px; height: 50px; border-radius: 15px; }
+.speaker-info h4 { margin: 0; font-size: 16px; color: #333; }
+.speaker-info p { margin: 2px 0 0 0; font-size: 12px; color: #961c46; }
+.arrow-icon { margin-left: auto; color: #ccc; }
+
+/* Bottom Action Bar */
+.bottom-action-bar {
+  position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%);
+  width: 100%; max-width: 430px; padding: 0 25px; box-sizing: border-box;
+}
+.main-action-btn {
+  width: 100%; background: #961c46; color: white;
+  padding: 18px; border: none; border-radius: 20px;
+  font-size: 16px; font-weight: 700; cursor: pointer;
+  box-shadow: 0 10px 30px rgba(150, 28, 70, 0.3);
+}
+
+/* --- LECTURER PROFILE STYLES --- */
+.profile-image-container { display: flex; justify-content: center; margin-bottom: 20px; }
+.big-profile-img {
+  width: 120px; height: 120px; border-radius: 30px;
+  border: 4px solid white;
+  box-shadow: 0 15px 40px rgba(150, 28, 70, 0.15);
+}
+
+.profile-text-center { text-align: center; margin-bottom: 30px; }
+.profile-text-center h2 { margin: 0; font-size: 24px; color: #4a1526; }
+.role { margin: 5px 0 0 0; color: #961c46; font-weight: 500; font-size: 14px; }
+
+/* Stats Row */
+.stats-row {
+  display: flex; justify-content: space-around; align-items: center;
+  background: white; padding: 20px; border-radius: 25px;
+  margin-bottom: 30px;
+  box-shadow: 0 10px 30px rgba(150, 28, 70, 0.05);
+}
+.stat-box { display: flex; flex-direction: column; align-items: center; }
+.stat-num { font-size: 18px; font-weight: 700; color: #333; }
+.stat-label { font-size: 11px; color: #888; margin-top: 4px; text-transform: uppercase; letter-spacing: 0.5px; }
+.stat-divider { width: 1px; height: 30px; background: #eee; }
+
+.contact-btn {
+  width: 100%; background: white; color: #961c46;
+  border: 2px solid #961c46; padding: 15px; border-radius: 20px;
+  font-weight: 700; cursor: pointer; margin-top: 20px;
+}

@@ -1,0 +1,105 @@
+.bottom-nav {
+  /* Positioning */
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  /* Sizing */
+  width: calc(100% - 40px);
+  max-width: 420px;
+  height: 70px;
+
+  /* Style */
+  background: rgba(255, 255, 255, 0.97);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 36px;
+
+  /* Shadow */
+  box-shadow: 0 8px 32px rgba(150, 28, 70, 0.18), 0 2px 8px rgba(0,0,0,0.06);
+  z-index: 1000;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+
+  padding: 0 8px;
+  box-sizing: border-box;
+}
+
+/* Each nav item takes equal space */
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  flex: 1;
+  gap: 4px;
+  padding: 6px 0;
+  border-radius: 20px;
+  min-width: 0; /* Prevents overflow */
+}
+
+.nav-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.nav-icon svg {
+  width: 22px;
+  height: 22px;
+  stroke: #bbb;
+  stroke-width: 2;
+  transition: all 0.25s ease;
+  display: block;
+}
+
+/* Label under the icon */
+.nav-label {
+  font-size: 10px;
+  font-weight: 600;
+  color: #bbb;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  line-height: 1;
+  transition: color 0.25s ease;
+  font-family: 'Outfit', 'DM Sans', sans-serif;
+  letter-spacing: 0.01em;
+}
+
+/* Active State */
+.nav-item.active .nav-icon svg {
+  stroke: #961c46;
+  fill: rgba(150, 28, 70, 0.08);
+}
+
+.nav-item.active .nav-icon {
+  transform: translateY(-3px);
+}
+
+.nav-item.active .nav-label {
+  color: #961c46;
+}
+
+/* Hover state for non-active items */
+.nav-item:not(.active):hover .nav-icon svg {
+  stroke: #c94070;
+}
+.nav-item:not(.active):hover .nav-label {
+  color: #c94070;
+}
+.main-content {
+  padding-bottom: 100px;
+}
+.bottom-nav {
+  position: fixed;
+  bottom: 20px;
+  z-index: 9999;
+}
